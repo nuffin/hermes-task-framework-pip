@@ -13,7 +13,7 @@ dependencies = []
 Source = "https://github.com/nuffin/hermes-task-framework-pip"
 
 [tool.setuptools.packages.find]
-include = ["task-framework*"]
+include = ["hermes_task_framework*"]
 
 [tool.setuptools.package-data]
-"task-framework" = ["skills/**/*"]
+"hermes_task_framework" = ["skills/**/*"]

@@ -1,6 +1,7 @@
 [submodule "skills-source"]
 	path = skills-source
 	url = git@github.com:nuffin/hermes-task-framework.git
-[submodule "task-framework"]
-	path = task-framework
-	url = git@github.com:nuffin/hermes-task-framework.git
+
+[submodule "hermes_task_framework"]
+	path = hermes_task_framework
+	url = https://github.com/nuffin/hermes-task-framework.git
