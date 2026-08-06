@@ -1,5 +1,39 @@
 # Changelog
 
+## v1.1.0 (2026-08-06)
+
+> task-framework `f9fc5b9` → `e046cdc`
+
+### manage_task.py — 6 new lifecycle commands
+
+- `create` — directory + hash + meta + templates + optional inbox move
+- `accept` — create task from inbox file/dir (auto-derives name)
+- `decline` — move inbox item to declined/ with DECLINED.md
+- `status` — update ## Status line + auto index update
+- `view` — print README.md + TASK.md (hash/dir/name resolution)
+- `reset` — clear output/ + reset checkboxes + set status active (--no-hard for soft reset)
+- All commands use cp+verify+rm for file moves (never raw mv)
+- All commands auto-run update-index.py after changes
+
+### Code quality fixes
+
+- A1: replace 4 stale hardcoded paths with relative scripts/ paths
+- A2: cmd_init .hermes-task.json schema 5→12 fields
+- A3: unify index systems (reindex→update-index.py, list→direct scan)
+- A4: task-runner.sh log path logs/→output/logs/
+- B1: secrets.token_hex(3) replaces md5(random) across all 3 scripts
+- B4: _safe_move rollback on failure
+- B6: cmd_decline basename() prevents path injection
+- C6: shared _resolve_tasks_root() in all 3 scripts (HERMES_TASKS_ROOT | DIR → config → fallback)
+
+### Docs
+
+- D1-D5: SKILL.md updates — trigger signal→script, inline python→task_ref.py refs
+
+## v1.0.4 (2026-08-06)
+
+> Unreleased bump (version gap)
+
 ## v1.0.1 (2026-07-18)
 
 > task-framework `da9609f` → `dc6d900`
