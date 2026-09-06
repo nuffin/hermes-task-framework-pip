@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.4.0 (2026-09-06 10:56:36 CST)
+
+> task-framework `b04fb4a` → `7758cb5`
+
+### Release contents
+
+- Add verified task synchronization safeguards, including task-scoped symlink
+  validation, write locks, checkpoint synchronization, and corresponding tests.
+- Isolate the on-demand interactive-window reference as a task-specific overlay.
+- Refresh package documentation to use the canonical MEMORY.md and CHANGELOG.md
+  task artifacts and the current wrapper/source repository paths.
+
 ## v1.1.0 (2026-08-06)
 
 > task-framework `f9fc5b9` → `e046cdc`

@@ -12,12 +12,13 @@ pip install hermes-task-framework
 
 ## What's Inside
 
-6 skills bundled from [task-framework](https://github.com/nuffin/task-framework):
+The package bundles the task-framework skill library from
+[hermes-task-framework](https://github.com/nuffin/hermes-task-framework), including:
 
 | Skill | What it does |
 |-------|-------------|
 | `task-framework` | Structured task lifecycle: directory, checklist, logs, scripts |
-| `task-tracker` | Auto-update TASK.md checkboxes and TASK_MEMORY.md |
+| `task-tracker` | Auto-update TASK.md checkboxes, MEMORY.md, and CHANGELOG.md |
 | `task-timestamp-convention` | Naming rules for task directories |
 | `task-lifecycle-edge-cases` | Recover lost TASK.md from artifacts |
 | `task-lifecycle-portability` | Export/import tasks between machines |
@@ -41,7 +42,7 @@ Then in Hermes:
 > 创建一个任务来分析这个 PDF
 
 # The agent auto-detects task-framework, creates the directory,
-# writes TASK.md + TASK_MEMORY.md, and works through the checklist.
+# writes TASK.md + MEMORY.md + CHANGELOG.md, and works through the checklist.
 ```
 
 ## Task Structure
@@ -49,7 +50,8 @@ Then in Hermes:
 ```
 tasks/20260717-154154.task-framework-extract-standalone-fad328/
 ├── TASK.md              ← checklist with status + [ ] / [x]
-├── TASK_MEMORY.md        ← auto-appended decision log
+├── MEMORY.md             ← durable task context
+├── CHANGELOG.md          ← chronological decision and change log
 ├── README.md             ← goal, scope, key findings
 ├── .hermes-task.json     ← hash, outputs, dependencies
 ├── input/                ← source files (never deleted)
@@ -59,7 +61,7 @@ tasks/20260717-154154.task-framework-extract-standalone-fad328/
 ## Development
 
 ```bash
-git clone --recurse-submodules https://github.com/nuffin/hermes-task-framework.git
-cd hermes-task-framework
+git clone --recurse-submodules https://github.com/nuffin/hermes-task-framework-pip.git
+cd hermes-task-framework-pip
 pip install -e .
 ```
