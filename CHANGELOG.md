@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.5.0 (2026-09-06 21:48:31 CST)
+
+> task-framework `7758cb5` → `78d1423`
+
+### Remote execution provider/model contract
+
+- Persist the provider/model pair selected at task creation in
+  `extensions.remote_execution`, with explicit, launch-environment, and
+  configuration source provenance.
+- Add `manage_task.py create --model` and `--provider` overrides.
+- Require remote dispatch consumers to preserve the task's resolved pair rather
+  than silently using an executor-local default.
+
 ## v1.4.0 (2026-09-06 10:56:36 CST)
 
 > task-framework `b04fb4a` → `7758cb5`
